@@ -15,7 +15,6 @@
             color: #333;
         }
 
-        /* Fondo atractivo */
         header {
             background: linear-gradient(to bottom, rgba(0, 50, 0, 0.7), rgba(0, 100, 0, 0.8)), 
                         url('ruta/a/fondo_biorrefineria.jpg') no-repeat center center/cover;
@@ -101,14 +100,6 @@
             transform: translateY(-50%);
         }
 
-        .carousel-controls button {
-            background: rgba(0, 100, 0, 0.7);
-            border: none;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-        }
-
         .team {
             display: flex;
             gap: 20px;
@@ -168,11 +159,46 @@
             margin-bottom: 10px;
         }
 
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 15px;
+            background: #004d00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #00ff7f;
+        }
+
         footer {
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -200,12 +226,9 @@
         <p>El objetivo principal de SUSBIOR es optimizar las cadenas de suministro para biorrefinerías sostenibles, promoviendo la eficiencia, el uso de recursos renovables y la minimización del impacto ambiental.</p>
         <div class="carousel">
             <div class="carousel-images">
-                <img src="ruta/a/concepto_general.jpg" alt="Concepto General">
+                <img src="ruta/a/concepto_general1.jpg" alt="Concepto General 1">
+                <img src="ruta/a/concepto_general2.jpg" alt="Concepto General 2">
                 <img src="ruta/a/metodologia.jpg" alt="Metodología">
-            </div>
-            <div class="carousel-controls">
-                <button onclick="prevSlide()">&#10094;</button>
-                <button onclick="nextSlide()">&#10095;</button>
             </div>
         </div>
     </section>
@@ -214,26 +237,7 @@
     <section id="equipo">
         <h2>Equipo</h2>
         <div class="team">
-            <div class="team-member">
-                <img src="ruta/a/integrante1.jpg" alt="Dr. Juan Pérez">
-                <h3>Dr. Juan Pérez</h3>
-                <p>Coordinador del proyecto.</p>
-            </div>
-            <div class="team-member">
-                <img src="ruta/a/integrante2.jpg" alt="Dra. María López">
-                <h3>Dra. María López</h3>
-                <p>Especialista en sostenibilidad.</p>
-            </div>
-            <div class="team-member">
-                <img src="ruta/a/integrante3.jpg" alt="Dr. Carlos Gómez">
-                <h3>Dr. Carlos Gómez</h3>
-                <p>Biotecnología aplicada.</p>
-            </div>
-            <div class="team-member">
-                <img src="ruta/a/integrante4.jpg" alt="Dra. Ana Torres">
-                <h3>Dra. Ana Torres</h3>
-                <p>Analista de ciclo de vida.</p>
-            </div>
+            <!-- Miembros del equipo -->
         </div>
     </section>
 
@@ -241,8 +245,7 @@
     <section id="novedades">
         <h2>Novedades</h2>
         <ul class="news">
-            <li class="news-item">[29/11/2024] Publicación en Sustainable Energy.</li>
-            <li class="news-item">[15/10/2024] Participación en BioRefinery Europe 2024.</li>
+            <!-- Novedades -->
         </ul>
     </section>
 
@@ -250,26 +253,39 @@
     <section id="resultados">
         <h2>Resultados</h2>
         <div class="results-grid">
-            <div class="result-item">
-                <img src="ruta/a/resultado1.jpg" alt="Resultado 1">
-                <h3>Modelo de optimización</h3>
-                <a href="resultado1.html">Ver más</a>
-            </div>
-            <div class="result-item">
-                <img src="ruta/a/resultado2.jpg" alt="Resultado 2">
-                <h3>Análisis de ciclo de vida</h3>
-                <a href="resultado2.html">Ver más</a>
-            </div>
+            <!-- Resultados -->
         </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 SUSBIOR. Todos los derechos reservados.</p>
+        <p>Proyecto financiado por la Agencia Estatal de Investigación. Código del proyecto: AEI-12345.</p>
     </footer>
 
     <!-- Script del carrusel -->
     <script>
         let currentSlide = 0;
 
-        function showSlide
+        function autoSlide() {
+            const slides = document.querySelector('.carousel-images');
+            const totalSlides = slides.children.length;
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        setInterval(autoSlide, 5000); // Cambiar cada 5 segundos
+    </script>
+</body>
+</html>
