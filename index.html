@@ -65,28 +65,46 @@
             margin-top: 0;
         }
 
-        .grid {
+        .figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .team {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            justify-content: center;
         }
 
-        .grid-item {
+        .team-member {
             flex: 1 1 calc(33.333% - 20px);
+            text-align: center;
             background: #f9f9f9;
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            text-align: center;
         }
 
-        .grid-item h3 {
-            margin: 0 0 10px;
-            color: #004d00;
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
 
-        .grid-item p {
-            font-size: 0.9rem;
+        .news, .publications {
+            margin-top: 20px;
+        }
+
+        .news-item, .publication-item {
+            margin-bottom: 15px;
         }
 
         footer {
@@ -113,7 +131,9 @@
     <!-- Navegación -->
     <nav>
         <a href="#sobre-nosotros">Sobre Nosotros</a>
-        <a href="#objetivos">Objetivos</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#novedades">Novedades</a>
+        <a href="#resultados">Resultados/Publicaciones</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
@@ -121,31 +141,63 @@
     <section id="sobre-nosotros">
         <h2>Sobre Nosotros</h2>
         <p>El proyecto SUSBIOR se centra en la optimización de cadenas de suministro para biorrefinerías sostenibles, con el objetivo de maximizar la eficiencia, reducir el impacto ambiental y fomentar el uso de recursos renovables.</p>
+        <div class="figure">
+            <img src="ruta/a/imagen_proyecto.jpg" alt="Figura general del proyecto">
+            <p>Figura: Esquema general del proyecto SUSBIOR.</p>
+        </div>
     </section>
 
-    <!-- Sección de objetivos -->
-    <section id="objetivos">
-        <h2>Objetivos del Proyecto</h2>
-        <div class="grid">
-            <div class="grid-item">
-                <h3>Sostenibilidad</h3>
-                <p>Desarrollar soluciones que minimicen el impacto ambiental.</p>
+    <!-- Equipo -->
+    <section id="equipo">
+        <h2>Equipo de Investigación</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="ruta/a/foto_integrante1.jpg" alt="Foto del investigador 1">
+                <h3>Dr. Juan Pérez</h3>
+                <p>Coordinador del proyecto, especializado en optimización de cadenas de suministro.</p>
             </div>
-            <div class="grid-item">
-                <h3>Optimización</h3>
-                <p>Maximizar la eficiencia en las cadenas de suministro.</p>
+            <div class="team-member">
+                <img src="ruta/a/foto_integrante2.jpg" alt="Foto del investigador 2">
+                <h3>Dra. María López</h3>
+                <p>Investigadora en sostenibilidad y análisis de ciclo de vida.</p>
             </div>
-            <div class="grid-item">
-                <h3>Innovación</h3>
-                <p>Fomentar el uso de tecnologías avanzadas en biorrefinerías.</p>
+            <div class="team-member">
+                <img src="ruta/a/foto_integrante3.jpg" alt="Foto del investigador 3">
+                <h3>Dr. Carlos Gómez</h3>
+                <p>Especialista en biotecnología aplicada a biorrefinerías.</p>
             </div>
         </div>
     </section>
 
-    <!-- Sección de contacto -->
+    <!-- Novedades -->
+    <section id="novedades">
+        <h2>Novedades</h2>
+        <div class="news">
+            <div class="news-item">
+                <strong>[29/11/2024]</strong> Publicación de un artículo en la revista "Sustainable Energy".
+            </div>
+            <div class="news-item">
+                <strong>[15/10/2024]</strong> Participación en el congreso "BioRefinery Europe 2024".
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados/Publicaciones -->
+    <section id="resultados">
+        <h2>Resultados y Publicaciones</h2>
+        <div class="publications">
+            <div class="publication-item">
+                <strong>Artículo:</strong> "Optimización de cadenas de suministro de biorrefinerías". Autores: J. Pérez, M. López. <i>Renewable Energy Journal</i>, 2024.
+            </div>
+            <div class="publication-item">
+                <strong>Proyecto:</strong> Desarrollo de software de modelado para optimización de biorrefinerías.
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
-        <p>Si deseas más información sobre el proyecto SUSBIOR, no dudes en contactarnos:</p>
         <p>Email: <a href="mailto:info@susbior.com">info@susbior.com</a></p>
         <p>Teléfono: +34 123 456 789</p>
     </section>
@@ -156,5 +208,3 @@
     </footer>
 </body>
 </html>
-
-
