@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Estilos CSS -->
     <style>
+        /* Estilo general */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -16,25 +17,28 @@
             color: #333;
         }
 
+        /* Encabezado con fondo dinámico */
         header {
-            background: #006400;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('ruta/a/fondo_inicio.jpg') no-repeat center center/cover;
             color: #fff;
-            padding: 20px 0;
+            padding: 60px 20px;
             text-align: center;
+            animation: fadeIn 2s;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         header p {
             margin: 10px 0 0;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
 
         nav {
-            background: #004d00;
+            background: #222;
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -45,10 +49,11 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 1rem;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #00ff7f;
         }
 
         section {
@@ -58,6 +63,7 @@
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s;
         }
 
         section h2 {
@@ -65,31 +71,15 @@
             margin-top: 0;
         }
 
-        .figure {
-            text-align: center;
-            margin: 20px 0;
-        }
-
         .figure img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
+            transition: transform 0.3s;
         }
 
-        .team {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .team-member {
-            flex: 1 1 calc(33.333% - 20px);
-            text-align: center;
-            background: #f9f9f9;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+        .figure img:hover {
+            transform: scale(1.05);
         }
 
         .team-member img {
@@ -97,14 +87,25 @@
             height: 150px;
             border-radius: 50%;
             margin-bottom: 10px;
+            transition: transform 0.3s;
         }
 
-        .news, .publications {
-            margin-top: 20px;
+        .team-member img:hover {
+            transform: scale(1.1);
         }
 
-        .news-item, .publication-item {
+        .publication-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
             margin-bottom: 15px;
+        }
+
+        .publication-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
         }
 
         footer {
@@ -118,6 +119,27 @@
         footer p {
             margin: 0;
             font-size: 0.8rem;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -187,10 +209,16 @@
         <h2>Resultados y Publicaciones</h2>
         <div class="publications">
             <div class="publication-item">
-                <strong>Artículo:</strong> "Optimización de cadenas de suministro de biorrefinerías". Autores: J. Pérez, M. López. <i>Renewable Energy Journal</i>, 2024.
+                <img src="ruta/a/imagen_articulo1.jpg" alt="Artículo 1">
+                <div>
+                    <strong>Artículo:</strong> "Optimización de cadenas de suministro de biorrefinerías". Autores: J. Pérez, M. López. <i>Renewable Energy Journal</i>, 2024.
+                </div>
             </div>
             <div class="publication-item">
-                <strong>Proyecto:</strong> Desarrollo de software de modelado para optimización de biorrefinerías.
+                <img src="ruta/a/imagen_articulo2.jpg" alt="Artículo 2">
+                <div>
+                    <strong>Proyecto:</strong> Desarrollo de software de modelado para optimización de biorrefinerías.
+                </div>
             </div>
         </div>
     </section>
