@@ -2,11 +2,159 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUSBIOR: Proyecto de Biorrefinerías</title>
+    <!-- Fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #006400;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: #004d00;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #006400;
+            margin-top: 0;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .grid-item {
+            flex: 1 1 calc(33.333% - 20px);
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .grid-item h3 {
+            margin: 0 0 10px;
+            color: #004d00;
+        }
+
+        .grid-item p {
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.8rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenidos al Proyecto SUSBIOR</h1>
-    <p>Optimización de cadenas de suministro de biorrefinerías sostenibles.</p>
+    <!-- Encabezado -->
+    <header>
+        <h1>Bienvenidos al Proyecto SUSBIOR</h1>
+        <p>Optimización de cadenas de suministro de biorrefinerías sostenibles</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#sobre-nosotros">Sobre Nosotros</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Sección principal -->
+    <section id="sobre-nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>El proyecto SUSBIOR se centra en la optimización de cadenas de suministro para biorrefinerías sostenibles, con el objetivo de maximizar la eficiencia, reducir el impacto ambiental y fomentar el uso de recursos renovables.</p>
+    </section>
+
+    <!-- Sección de objetivos -->
+    <section id="objetivos">
+        <h2>Objetivos del Proyecto</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <h3>Sostenibilidad</h3>
+                <p>Desarrollar soluciones que minimicen el impacto ambiental.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Optimización</h3>
+                <p>Maximizar la eficiencia en las cadenas de suministro.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Innovación</h3>
+                <p>Fomentar el uso de tecnologías avanzadas en biorrefinerías.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Si deseas más información sobre el proyecto SUSBIOR, no dudes en contactarnos:</p>
+        <p>Email: <a href="mailto:info@susbior.com">info@susbior.com</a></p>
+        <p>Teléfono: +34 123 456 789</p>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 SUSBIOR. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
+
 
