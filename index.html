@@ -6,7 +6,6 @@
     <title>SUSBIOR: Proyecto de Biorrefinerías</title>
     <!-- Fuente de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Estilos CSS -->
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -16,8 +15,10 @@
             color: #333;
         }
 
+        /* Fondo atractivo */
         header {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('ruta/a/fondo_inicio.jpg') no-repeat center center/cover;
+            background: linear-gradient(to bottom, rgba(0, 50, 0, 0.7), rgba(0, 100, 0, 0.8)), 
+                        url('ruta/a/fondo_biorrefineria.jpg') no-repeat center center/cover;
             color: #fff;
             padding: 60px 20px;
             text-align: center;
@@ -25,7 +26,7 @@
 
         header h1 {
             margin: 0;
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
 
         header p {
@@ -33,7 +34,7 @@
         }
 
         nav {
-            background: #222;
+            background: #004d00;
             color: #fff;
             text-align: center;
             padding: 15px 0;
@@ -78,6 +79,7 @@
             display: flex;
             overflow: hidden;
             position: relative;
+            margin-top: 20px;
         }
 
         .carousel-images {
@@ -100,7 +102,7 @@
         }
 
         .carousel-controls button {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 100, 0, 0.7);
             border: none;
             color: white;
             padding: 10px;
@@ -120,6 +122,7 @@
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 8px;
+            background: #f9f9f9;
         }
 
         .team-member img {
@@ -183,7 +186,7 @@
     <!-- Navegación -->
     <nav>
         <ul>
-            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#objetivo">Objetivo de SUSBIOR</a></li>
             <li><a href="#equipo">Equipo</a></li>
             <li><a href="#novedades">Novedades</a></li>
             <li><a href="#resultados">Resultados</a></li>
@@ -191,9 +194,10 @@
         </ul>
     </nav>
 
-    <!-- Sobre Nosotros -->
-    <section id="sobre-nosotros">
-        <h2>Sobre Nosotros</h2>
+    <!-- Objetivo de SUSBIOR -->
+    <section id="objetivo">
+        <h2>Objetivo de SUSBIOR</h2>
+        <p>El objetivo principal de SUSBIOR es optimizar las cadenas de suministro para biorrefinerías sostenibles, promoviendo la eficiencia, el uso de recursos renovables y la minimización del impacto ambiental.</p>
         <div class="carousel">
             <div class="carousel-images">
                 <img src="ruta/a/concepto_general.jpg" alt="Concepto General">
@@ -268,20 +272,4 @@
     <script>
         let currentSlide = 0;
 
-        function showSlide(index) {
-            const slides = document.querySelector('.carousel-images');
-            const totalSlides = slides.children.length;
-            currentSlide = (index + totalSlides) % totalSlides;
-            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
-    </script>
-</body>
-</html>
+        function showSlide
