@@ -6,7 +6,6 @@
     <title>SUSBIOR: Proyecto de Biorrefinerías</title>
     <!-- Fuente de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Estilos CSS -->
     <style>
         /* Estilo general */
         body {
@@ -17,7 +16,6 @@
             color: #333;
         }
 
-        /* Encabezado con fondo dinámico */
         header {
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('ruta/a/fondo_inicio.jpg') no-repeat center center/cover;
             color: #fff;
@@ -41,21 +39,38 @@
             background: #222;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        nav a {
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
             font-size: 1rem;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s;
         }
 
-        nav a:hover {
+        nav ul li a:hover {
             color: #00ff7f;
+            transform: scale(1.1);
         }
 
+        /* Sección principal */
         section {
             max-width: 1200px;
             margin: 20px auto;
@@ -82,30 +97,50 @@
             transform: scale(1.05);
         }
 
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-            transition: transform 0.3s;
-        }
-
-        .team-member img:hover {
-            transform: scale(1.1);
-        }
-
-        .publication-item {
+        /* Resultados como galería */
+        .results-grid {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
             gap: 20px;
-            margin-bottom: 15px;
+            justify-content: center;
         }
 
-        .publication-item img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
+        .result-item {
+            flex: 1 1 calc(33.333% - 20px);
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
             border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .result-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .result-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .result-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #006400;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .result-item a:hover {
+            background: #00ff7f;
         }
 
         footer {
@@ -152,82 +187,44 @@
 
     <!-- Navegación -->
     <nav>
-        <a href="#sobre-nosotros">Sobre Nosotros</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#novedades">Novedades</a>
-        <a href="#resultados">Resultados/Publicaciones</a>
-        <a href="#contacto">Contacto</a>
+        <ul>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#novedades">Novedades</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
     </nav>
 
     <!-- Sección principal -->
     <section id="sobre-nosotros">
         <h2>Sobre Nosotros</h2>
         <p>El proyecto SUSBIOR se centra en la optimización de cadenas de suministro para biorrefinerías sostenibles, con el objetivo de maximizar la eficiencia, reducir el impacto ambiental y fomentar el uso de recursos renovables.</p>
-        <div class="figure">
-            <img src="ruta/a/imagen_proyecto.jpg" alt="Figura general del proyecto">
-            <p>Figura: Esquema general del proyecto SUSBIOR.</p>
-        </div>
     </section>
 
-    <!-- Equipo -->
-    <section id="equipo">
-        <h2>Equipo de Investigación</h2>
-        <div class="team">
-            <div class="team-member">
-                <img src="ruta/a/foto_integrante1.jpg" alt="Foto del investigador 1">
-                <h3>Dr. Juan Pérez</h3>
-                <p>Coordinador del proyecto, especializado en optimización de cadenas de suministro.</p>
-            </div>
-            <div class="team-member">
-                <img src="ruta/a/foto_integrante2.jpg" alt="Foto del investigador 2">
-                <h3>Dra. María López</h3>
-                <p>Investigadora en sostenibilidad y análisis de ciclo de vida.</p>
-            </div>
-            <div class="team-member">
-                <img src="ruta/a/foto_integrante3.jpg" alt="Foto del investigador 3">
-                <h3>Dr. Carlos Gómez</h3>
-                <p>Especialista en biotecnología aplicada a biorrefinerías.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Novedades -->
-    <section id="novedades">
-        <h2>Novedades</h2>
-        <div class="news">
-            <div class="news-item">
-                <strong>[29/11/2024]</strong> Publicación de un artículo en la revista "Sustainable Energy".
-            </div>
-            <div class="news-item">
-                <strong>[15/10/2024]</strong> Participación en el congreso "BioRefinery Europe 2024".
-            </div>
-        </div>
-    </section>
-
-    <!-- Resultados/Publicaciones -->
+    <!-- Resultados -->
     <section id="resultados">
-        <h2>Resultados y Publicaciones</h2>
-        <div class="publications">
-            <div class="publication-item">
-                <img src="ruta/a/imagen_articulo1.jpg" alt="Artículo 1">
-                <div>
-                    <strong>Artículo:</strong> "Optimización de cadenas de suministro de biorrefinerías". Autores: J. Pérez, M. López. <i>Renewable Energy Journal</i>, 2024.
-                </div>
+        <h2>Resultados</h2>
+        <div class="results-grid">
+            <div class="result-item">
+                <img src="ruta/a/resultado1.jpg" alt="Resultado 1">
+                <h3>Modelo de optimización</h3>
+                <p>Descripción breve del resultado del modelo de optimización.</p>
+                <a href="resultado1.html">Ver más</a>
             </div>
-            <div class="publication-item">
-                <img src="ruta/a/imagen_articulo2.jpg" alt="Artículo 2">
-                <div>
-                    <strong>Proyecto:</strong> Desarrollo de software de modelado para optimización de biorrefinerías.
-                </div>
+            <div class="result-item">
+                <img src="ruta/a/resultado2.jpg" alt="Resultado 2">
+                <h3>Análisis de ciclo de vida</h3>
+                <p>Descripción breve del resultado del análisis.</p>
+                <a href="resultado2.html">Ver más</a>
+            </div>
+            <div class="result-item">
+                <img src="ruta/a/resultado3.jpg" alt="Resultado 3">
+                <h3>Software desarrollado</h3>
+                <p>Descripción del software de modelado desarrollado.</p>
+                <a href="resultado3.html">Ver más</a>
             </div>
         </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Email: <a href="mailto:info@susbior.com">info@susbior.com</a></p>
-        <p>Teléfono: +34 123 456 789</p>
     </section>
 
     <!-- Pie de página -->
