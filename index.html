@@ -90,11 +90,13 @@
             transition: transform 0.5s ease-in-out;
         }
 
-        .carousel img {
-            min-width: 100%;
-            height: 300px; /* Ajustado para que coincida con el contenedor */
-            object-fit: cover;
+       .carousel img {
+            height: 250px; /* Reducido para un tamaño más compacto */
+            object-fit: contain; /* Asegura que toda la imagen sea visible */
         }
+
+
+        
 
         .team {
             display: flex;
