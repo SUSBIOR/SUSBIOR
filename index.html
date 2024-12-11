@@ -15,22 +15,24 @@
             color: #333;
         }
 
-        header {
+    header {
             background: url('images/Fondo.png') no-repeat center center/cover;
             color: #fff;
-            padding: 60px 20px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
             font-size: 3.5rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
         header p {
             font-size: 1.5rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         nav {
@@ -75,6 +77,135 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .team {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            flex: 1 1 calc(25% - 20px);
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .news {
+            list-style: none;
+            padding: 0;
+        }
+
+        .news-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-left: 5px solid #006400;
+        }
+
+        .results-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .result-item {
+            flex: 1 1 calc(33.333% - 20px);
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .result-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 15px;
+            background: #004d00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #00ff7f;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a:hover {
+            color: #00ff7f;
+        }
     </style>
 </head>
 <body>
@@ -93,7 +224,8 @@
             <li><a href="#resultados">Resultados</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
-    </nav>   
+    </nav>
+
     <!-- Objetivo de SUSBIOR -->
     <section id="objetivo">
         <h2>Objetivo de SUSBIOR</h2>
@@ -201,4 +333,6 @@
     </script>
 </body>
 </html>
+
+     
     
