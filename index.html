@@ -90,12 +90,22 @@
             transition: transform 0.5s ease-in-out;
         }
 
-        .carousel img {
+       .carousel img {
             min-width: 100%;
-        height: 100%; /* Ajusta al contenedor */
-        object-fit: contain; /* Asegura que las imágenes completas sean visibles */
+            object-fit: contain;
         }
 
+        .carousel img.image-1 {
+            height: 100px; /* Tamaño específico para la primera imagen */
+        }
+
+        .carousel img.image-2 {
+            height: 200px; /* Tamaño específico para la segunda imagen */
+        }
+
+        .carousel img.image-3 {
+            height: 300px; /* Tamaño específico para la tercera imagen */
+        }
 
         .team {
             display: flex;
@@ -250,11 +260,12 @@
         </p>
         <div class="carousel">
             <div class="carousel-images">
-                <img src="images/LOGO_COLOR.png" alt="Figura 1">
-                <img src="images/Concept.png" alt="Figura 2">
-                <img src="images/Methodology.png" alt="Figura 3">
+                <img src="images/LOGO_COLOR.png" alt="Figura 1" class="image-1">
+                <img src="images/Concept.png" alt="Figura 2" class="image-2">
+    <img src="images/Methodology.png" alt="Figura 3" class="image-3">
             </div>
         </div>
+        
     </section>
 
     <!-- Equipo -->
