@@ -100,13 +100,21 @@
 
         .team {
             display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .team-row {
+            display: flex;
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
+            width: 100%;
         }
 
         .team-member {
-            flex: 1 1 calc(25% - 20px);
+            flex: 1 1 calc(50% - 20px);
             text-align: center;
             padding: 15px;
             border: 1px solid #ddd;
@@ -155,36 +163,6 @@
             width: 150px; /* Tamaño pequeño */
             height: auto;
             margin-bottom: 10px;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .contact-form button {
-            padding: 10px 15px;
-            background: #004d00;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .contact-form button:hover {
-            background: #00ff7f;
         }
 
         footer {
@@ -240,10 +218,7 @@
     <section id="objetivo">
         <h2>Objetivo de SUSBIOR</h2>
         <p>
-            SUSBIOR es un proyecto innovador que busca impulsar el uso de biorrefinerías en España con biohub en Europa,
-            combinando tecnología avanzada y sostenibilidad. Estas biorrefinerías transforman recursos naturales en energía
-            renovable, biocombustibles y productos químicos que reemplazan a los derivados del petróleo, ayudando a combatir
-            el cambio climático y reducir nuestra dependencia de combustibles fósiles. 
+            SUSBIOR es un proyecto innovador que busca impulsar el uso de biorrefinerías en España con biohub en Europa...
         </p>
         <div class="carousel">
             <div class="carousel-images">
@@ -258,30 +233,36 @@
     <section id="equipo">
         <h2>Equipo</h2>
         <div class="team">
-            <div class="team-member">
-                <img src="images/Foto AGM2.jpg" alt="Dr. Ángel Galán Martín">
-                <h3>Dr. Ángel Galán Martín</h3>
-                <p>Coordinador del proyecto. Experto en la combinación de optimización matemática con análisis de ciclo de vida.</p>
+            <!-- First Row -->
+            <div class="team-row">
+                <div class="team-member">
+                    <img src="images/Foto AGM2.jpg" alt="Dr. Ángel Galán Martín">
+                    <h3>Dr. Ángel Galán Martín</h3>
+                    <p>Coordinador del proyecto. Experto en la combinación de optimización matemática con análisis de ciclo de vida.</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/Inmaculada-Romero-Pulido.jpg" alt="Dra. Inmaculada Romero Pulido">
+                    <h3>Dra. Inmaculada Romero Pulido</h3>
+                    <p>Especialista en procesos de biorrefinería y valorización de residuos.</p>
+                </div>
             </div>
-            <div class="team-member">
-                <img src="images/Inmaculada-Romero-Pulido.jpg" alt="Dra. Inmaculada Romero Pulido">
-                <h3>Dra. Inmaculada Romero Pulido</h3>
-                <p>Especialista en procesos de biorrefinería y valorización de residuos.</p>
-            </div>
-            <div class="team-member">
-                <img src="ruta/a/integrante2.jpg" alt="Dr. Dra. XXX">
-                <h3>Investigador/a</h3>
-                <p>Investigador/a postdoctoral especializado/a en ingeniería de procesos sostenibles.</p>
-            </div>
-            <div class="team-member">
-                <img src="images/Cristina Marzo.jpg" alt="Dra. Cristina Marzo Gago">
-                <h3>Dra. Cristina Marzo Gago</h3>
-                <p>Experta en operaciones piloto y valorización de residuos agroindustriales.</p>
-            </div>
-            <div class="team-member">
-                <img src="ruta/a/integrante4.jpg" alt="Dra. Déborah Pérez Almada">
-                <h3>Dra. Déborah Pérez Almada</h3>
-                <p>Estudiante de doctorado e ingeniera química con experiencia en análisis de ciclo de vida.</p>
+            <!-- Second Row -->
+            <div class="team-row">
+                <div class="team-member">
+                    <img src="ruta/a/integrante2.jpg" alt="Dr. Dra. XXX">
+                    <h3>Investigador/a</h3>
+                    <p>Investigador/a postdoctoral especializado/a en ingeniería de procesos sostenibles.</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/Cristina Marzo.jpg" alt="Dra. Cristina Marzo Gago">
+                    <h3>Dra. Cristina Marzo Gago</h3>
+                    <p>Experta en operaciones piloto y valorización de residuos agroindustriales.</p>
+                </div>
+                <div class="team-member">
+                    <img src="ruta/a/integrante4.jpg" alt="Dra. Déborah Pérez Almada">
+                    <h3>Dra. Déborah Pérez Almada</h3>
+                    <p>Estudiante de doctorado e ingeniera química con experiencia en análisis de ciclo de vida.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -298,7 +279,7 @@
     <section id="resultados">
         <h2>Resultados</h2>
         <div class="results-grid">
-            <a href="Documents/SUSBIOR Brochure.pdf" target="_blank">
+            <a href="Documents/SUSBIOR_Brochure.pdf" target="_blank">
                 <div class="result-item">
                     <img src="images/Folleto.png" alt="Folleto informativo">
                     <h3>Folleto Informativo</h3>
@@ -310,17 +291,6 @@
                 <a href="resultado2.html">Ver más</a>
             </div>
         </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Correo electrónico" required>
-            <textarea placeholder="Mensaje" rows="5" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
     </section>
 
     <!-- Footer -->
@@ -336,5 +306,19 @@
             </a>
         </div>
     </footer>
+
+    <!-- Script del Carrusel -->
+    <script>
+        let currentSlide = 0;
+
+        function autoSlide() {
+            const slides = document.querySelector('.carousel-images');
+            const totalSlides = slides.children.length;
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        setInterval(autoSlide, 5000); // Cambiar cada 5 segundos
+    </script>
 </body>
 </html>
