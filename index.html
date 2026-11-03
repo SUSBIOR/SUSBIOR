@@ -57,6 +57,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav ul li {
@@ -84,7 +85,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Carrusel */
+        /* CARRUSEL */
 
         .carousel {
             position: relative;
@@ -109,7 +110,7 @@
             height: 400px;
         }
 
-        /* Equipo */
+        /* EQUIPO */
 
         .team {
             display: flex;
@@ -135,7 +136,7 @@
             object-fit: cover;
         }
 
-        /* Novedades */
+        /* NOVEDADES */
 
         .news {
             list-style: none;
@@ -149,7 +150,7 @@
             border-left: 5px solid #006400;
         }
 
-        /* Resultados */
+        /* RESULTADOS */
 
         .results-grid {
             display: flex;
@@ -224,7 +225,7 @@
             overflow-wrap: anywhere;
         }
 
-        /* Congresos: diseño compacto */
+        /* CONGRESOS: FORMATO COMPACTO */
 
         .congress-list {
             display: flex;
@@ -279,7 +280,35 @@
             text-decoration: underline;
         }
 
-        /* Contacto */
+        /* REPOSITORIO DE DATOS */
+
+        #repositorio {
+            scroll-margin-top: 90px;
+        }
+
+        .repository-notice {
+            margin: 25px auto;
+            padding: 25px;
+            max-width: 650px;
+            background: #f5faf5;
+            border: 1px solid #d5e5d5;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .repository-notice h3 {
+            margin-top: 0;
+            color: #004d00;
+            font-size: 1.2rem;
+        }
+
+        .repository-notice p {
+            margin-bottom: 0;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* CONTACTO */
 
         .contact-form {
             max-width: 600px;
@@ -312,7 +341,7 @@
             background: #00ff7f;
         }
 
-        /* Pie de página */
+        /* PIE DE PÁGINA */
 
         footer {
             background: #333;
@@ -344,7 +373,7 @@
             transform: scale(1.2);
         }
 
-        /* Adaptación a móviles */
+        /* ADAPTACIÓN A DISPOSITIVOS MÓVILES */
 
         @media (max-width: 700px) {
 
@@ -381,6 +410,10 @@
             .congress-item h4 {
                 font-size: 0.95rem;
             }
+
+            .repository-notice {
+                padding: 18px;
+            }
         }
 
     </style>
@@ -395,7 +428,7 @@
         <p>Optimización de cadenas de suministro de biorrefinerías sostenibles</p>
     </header>
 
-    <!-- NAVEGACIÓN -->
+    <!-- NAVEGACIÓN PRINCIPAL -->
 
     <nav>
         <ul>
@@ -403,6 +436,7 @@
             <li><a href="#equipo">Equipo</a></li>
             <li><a href="#novedades">Novedades</a></li>
             <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#repositorio">Repositorio de datos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
@@ -533,7 +567,8 @@
 
             <li class="news-item">
                 [18/09/2026]
-                <strong>Primer premio al mejor póster en CAPE Forum 2026</strong>,
+                <strong>Primer premio al mejor póster
+                (MDPI Best Poster Award) en CAPE Forum 2026</strong>,
                 celebrado en Salamanca (España), del 16 al 18 de septiembre de 2026.
 
                 El trabajo titulado
@@ -542,7 +577,10 @@
                     Employment Effects of Olive-Tree Pruning Biorefinery
                     Cluster Expansion under Stringent Greenhouse Gas
                     Mitigation Targets"
-                </em>.
+                </em>,
+                realizado por Duban García, Sadiel Martín-González,
+                Inmaculada Romero y Ángel Galán-Martín,
+                obtuvo el primer premio en la competición de pósteres.
 
                 <a href="images/Premio 1.jpeg"
                    target="_blank" rel="noopener noreferrer">
@@ -627,6 +665,21 @@
                        target="_blank">Ver más</a>
                 </div>
 
+                <!-- NUEVA PUBLICACIÓN CIENTÍFICA -->
+
+                <div class="result-item">
+                    <img src="images/elsevier.png"
+                         alt="An integrated early-stage decision framework for sustainable scale-up of biorefinery processes">
+                    <h3>
+                        An integrated early-stage decision framework
+                        for sustainable scale-up of biorefinery processes
+                    </h3>
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0961953426005842"
+                       target="_blank" rel="noopener noreferrer">
+                        Ver más
+                    </a>
+                </div>
+
             </div>
         </div>
 
@@ -684,9 +737,7 @@
                         I Congreso Internacional Sostenibilidad y
                         Cambio Climático · 10–11 julio 2025
                     </p>
-                    <p class="congress-type">
-                        Ponencia invitada / Keynote
-                    </p>
+                    <p class="congress-type">Ponencia invitada / Keynote</p>
                     <a href="Documents/PPT_CONCLIMA.pdf"
                        target="_blank" rel="noopener noreferrer">
                         📄 Ver presentación (PDF)
@@ -813,10 +864,31 @@
                        target="_blank">Ver más</a>
                 </div>
 
+                <!-- NUEVO ARTÍCULO DIVULGATIVO -->
+
+                <div class="result-item">
+                    <h3>
+                        Diseñar biorrefinerías más sostenibles
+                    </h3>
+                    <p>
+                        <strong>Scientias | 16 de octubre de 2026</strong>
+                    </p>
+                    <p>
+                        Artículo divulgativo sobre la integración de
+                        optimización matemática, simulación de procesos
+                        y análisis de ciclo de vida para diseñar
+                        biorrefinerías más sostenibles.
+                    </p>
+                    <a href="https://scientias.net/disenar-biorrefinerias-mas-sostenibles/"
+                       target="_blank" rel="noopener noreferrer">
+                        Leer artículo
+                    </a>
+                </div>
+
             </div>
         </div>
 
-        <!-- FORMACIÓN Y TRANSFERENCIA -->
+        <!-- FORMACIÓN Y TRANSFERENCIA DE CONOCIMIENTO -->
 
         <div class="results-category" id="formacion">
 
@@ -856,7 +928,77 @@
                     </a>
                 </div>
 
+                <!-- NUEVA ACTIVIDAD DE TRANSFERENCIA: COI -->
+
+                <div class="result-item">
+
+                    <img src="images/COI.jpg"
+                         alt="Presentación sobre valorización de biomasa del olivar y eliminación de CO2 en la reunión del Consejo Oleícola Internacional">
+
+                    <h3>
+                        The Hidden Value of Olive Biomass:
+                        Unlocking Its Potential through Biorefinery
+                        Pathways for Carbon Dioxide Removal
+                    </h3>
+
+                    <p>
+                        <strong>
+                            Expert Group Meeting on CO₂ Credits in Olive Groves
+                        </strong>
+                    </p>
+
+                    <p>
+                        International expert meeting organised by the
+                        International Olive Council (IOC) at the
+                        University of Jaén (Spain).
+                    </p>
+
+                    <p>
+                        <strong>Invited technical presentation</strong>
+                    </p>
+
+                    <a href="Documents/COI_CO2_Credits_Olive_Groves.pdf"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Ver presentación (PDF)
+                    </a>
+
+                </div>
+
             </div>
+        </div>
+
+    </section>
+
+    <!-- REPOSITORIO DE DATOS -->
+
+    <section id="repositorio">
+
+        <h2>Repositorio de datos</h2>
+
+        <p>
+            Este espacio estará dedicado a facilitar el acceso a
+            los conjuntos de datos, modelos matemáticos y recursos
+            desarrollados en el marco del proyecto SUSBIOR.
+        </p>
+
+        <p>
+            El repositorio contribuirá a la transparencia,
+            reproducibilidad y reutilización de los resultados
+            de investigación, promoviendo los principios
+            de ciencia abierta.
+        </p>
+
+        <div class="repository-notice">
+
+            <h3>Repositorio en preparación</h3>
+
+            <p>
+                Los recursos estarán disponibles progresivamente,
+                una vez completados los procesos de recopilación,
+                validación y documentación.
+            </p>
+
         </div>
 
     </section>
