@@ -1,11 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUSBIOR: Proyecto de Biorrefinerías</title>
+
     <!-- Fuente de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -78,11 +81,11 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-       .carousel {
+        .carousel {
             position: relative;
             overflow: hidden;
             width: 100%;
-            height: 400px; /* Ajusta el tamaño deseado */
+            height: 400px;
         }
 
         .carousel-images {
@@ -90,21 +93,21 @@
             transition: transform 0.5s ease-in-out;
         }
 
-       .carousel img {
+        .carousel img {
             min-width: 100%;
             object-fit: contain;
         }
 
         .carousel img.image-1 {
-            height: 400px; /* Tamaño específico para la primera imagen */
+            height: 400px;
         }
 
         .carousel img.image-2 {
-            height: 400px; /* Tamaño específico para la segunda imagen */
+            height: 400px;
         }
 
         .carousel img.image-3 {
-            height: 400px; /* Tamaño específico para la tercera imagen */
+            height: 400px;
         }
 
         .team {
@@ -161,7 +164,7 @@
         }
 
         .result-item img {
-            width: 100px; /* Tamaño más pequeño */
+            width: 100px;
             height: auto;
             margin-bottom: 10px;
         }
@@ -225,9 +228,69 @@
         .social-icons a img:hover {
             transform: scale(1.2);
         }
+
+        /* Organización de resultados por categorías */
+
+        .results-nav {
+            position: static;
+            background: transparent;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 0 20px;
+        }
+
+        .results-nav a {
+            display: inline-block;
+            padding: 10px 14px;
+            border: 1px solid #006400;
+            border-radius: 22px;
+            color: #004d00;
+            background: #f5faf5;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .results-nav a:hover,
+        .results-nav a:focus-visible {
+            background: #004d00;
+            color: #fff;
+        }
+
+        .results-category {
+            margin-top: 24px;
+            scroll-margin-top: 90px;
+        }
+
+        .results-category-title {
+            color: #004d00;
+            font-size: 1.35rem;
+            border-bottom: 2px solid #006400;
+            padding-bottom: 10px;
+            margin-bottom: 18px;
+        }
+
+        .results-category .result-item {
+            box-sizing: border-box;
+            min-width: 0;
+        }
+
+        .results-category .result-item h3 {
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 700px) {
+            .results-category .result-item {
+                flex-basis: 100%;
+            }
+        }
     </style>
 </head>
+
 <body>
+
     <!-- Encabezado -->
     <header>
         <h1>Proyecto SUSBIOR</h1>
@@ -248,6 +311,7 @@
     <!-- Objetivo -->
     <section id="objetivo">
         <h2>Objetivo de SUSBIOR</h2>
+
         <p>
             SUSBIOR es un proyecto innovador que busca impulsar el uso de biorrefinerías en España con biohub en Europa,
             combinando tecnología avanzada y sostenibilidad. Estas biorrefinerías transforman recursos naturales en
@@ -258,141 +322,247 @@
             Con esta visión, el proyecto contribuirá a una transición energética más justa y sostenible, ayudando a España
             a liderar el camino hacia un futuro neutro en carbono y beneficiando tanto a la economía como a la sociedad.
         </p>
+
         <div class="carousel">
             <div class="carousel-images">
                 <img src="images/LOGO_COLOR.png" alt="Figura 1" class="image-1">
                 <img src="images/Concept.png" alt="Figura 2" class="image-2">
-    <img src="images/Methodology.png" alt="Figura 3" class="image-3">
+                <img src="images/Methodology.png" alt="Figura 3" class="image-3">
             </div>
         </div>
-        
     </section>
 
     <!-- Equipo -->
     <section id="equipo">
         <h2>Equipo</h2>
+
         <div class="team">
+
             <div class="team-member">
                 <img src="images/Foto AGM2.jpg" alt="Dr. Ángel Galán Martín">
                 <h3>Dr. Ángel Galán Martín</h3>
                 <p>Coordinador del proyecto. Experto en la combinación de optimización matemática con análisis de ciclo de vida, desarrollando herramientas integradas para contribuir en la transición hacia una economía baja en carbono mediante soluciones innovadoras y sostenibles.</p>
             </div>
+
             <div class="team-member">
                 <img src="images/Inmaculada-Romero-Pulido.jpg" alt="Dra. Inmaculada Romero Pulido">
                 <h3>Dra. Inmaculada Romero Pulido</h3>
                 <p>Especialista en procesos de biorrefinería, centrado en la investigación experimental del aprovechamiento de residuos agrícolas y agroindustriales para el desarrollo de soluciones sostenibles y eficientes.</p>
-             </div>
+            </div>
+
             <div class="team-member">
                 <img src="images/Duban.jpg" alt="Dr. Duban F. García Navas">
                 <h3>Dr. Duban F. García Navas</h3>
-                <p>Investigador postdoctoral especializado en el área de ingeniería química en el campo de hidrocarburos y energías renovables.</p>   
+                <p>Investigador postdoctoral especializado en el área de ingeniería química en el campo de hidrocarburos y energías renovables.</p>
             </div>
+
             <div class="team-member">
-                <img src="images/Sadiel.jpg" alt=" Mr. Sadiel Martín González">
+                <img src="images/Sadiel.jpg" alt="Mr. Sadiel Martín González">
                 <h3>Sadiel Martín González</h3>
                 <p>Investigador predoctoral especializado en el área de ingeniería de procesos y sistemas sostenibles.</p>
-            </div>               
+            </div>
+
             <div class="team-member">
                 <img src="images/Cristina Marzo.jpg" alt="Dra. Cristina Marzo Gago">
                 <h3>Dra. Cristina Marzo Gago</h3>
                 <p>Investigadora postdoctoral Juan de la Cierva, con amplia experiencia en operaciones a escala de laboratorio y piloto, enfocado en la valorización de residuos agroindustriales.</p>
             </div>
+
             <div class="team-member">
                 <img src="images/Deborah.jpg" alt="Dra. Déborah Pérez Almada">
                 <h3>Dra. Déborah Pérez Almada</h3>
                 <p>Estudiante de doctorado e ingeniera química con experiencia en el uso de herramientas de simulación de procesos y su combinación con análisis de ciclo de vida.</p>
             </div>
+
         </div>
     </section>
 
- <!-- Novedades -->
-<section id="novedades">
-    <h2>Novedades</h2>
-    <ul class="news">
-        <li class="news-item">
-            [01/09/2024] Inicio proyecto SUSBIOR
-        </li>
+    <!-- Novedades -->
+    <section id="novedades">
+        <h2>Novedades</h2>
 
-        <li class="news-item">
-            [19/11/2024] Concurso público contrato postdoctoral –
-            <a href="https://sede.ujaen.es/publico/tablon/2c9a6149-4a02-48c3-b785-15f982d191ec" target="_blank">
-                Acceso a la convocatoria
-            </a> (Fecha límite de solicitud: 03/12/2024)
-        </li>
+        <ul class="news">
 
-        <li class="news-item">
-            [14/07/2025] Inicio del curso
-            "<a href="http://www.ceia3.es/es/agenda-y-eventos/curso-tnc-2025-analisis-de-ciclo-de-vida-y-optimizacion-para-biorrefinerias-sostenibles/" target="_blank">
-                Análisis de Ciclo de Vida y Optimización para Biorrefinerías Sostenibles
-            </a>" (14–18 de julio de 2025)
-        </li>
+            <li class="news-item">
+                [01/09/2024] Inicio proyecto SUSBIOR
+            </li>
 
-        <li class="news-item">
-            [01/04/2026] Inicio del curso internacional
-            <strong>Process Modeling and Simulation (DEQ4129)</strong>,
-            organizado conjuntamente por la State University of Maringá
-            (Brasil) y la Universidad de Jaén (España).
-        </li>
-    </ul>
-</section>
-    
-<!-- Resultados -->
-<section id="resultados">
-    <h2>Resultados</h2>
-    <div class="results-grid">
-        <div class="result-item">
-            <img src="images/Folleto.png" alt="Folleto informativo">
-            <h3>Folleto Informativo</h3>
-            <a href="Documents/Brochure SUSBIOR.pdf" target="_blank">Ver más</a>
+            <li class="news-item">
+                [19/11/2024] Concurso público contrato postdoctoral –
+                <a href="https://sede.ujaen.es/publico/tablon/2c9a6149-4a02-48c3-b785-15f982d191ec"
+                   target="_blank">
+                    Acceso a la convocatoria
+                </a>
+                (Fecha límite de solicitud: 03/12/2024)
+            </li>
+
+            <li class="news-item">
+                [14/07/2025] Inicio del curso
+                "<a href="http://www.ceia3.es/es/agenda-y-eventos/curso-tnc-2025-analisis-de-ciclo-de-vida-y-optimizacion-para-biorrefinerias-sostenibles/"
+                    target="_blank">
+                    Análisis de Ciclo de Vida y Optimización para Biorrefinerías Sostenibles
+                </a>"
+                (14–18 de julio de 2025)
+            </li>
+
+            <li class="news-item">
+                [01/04/2026] Inicio del curso internacional
+                <strong>Process Modeling and Simulation (DEQ4129)</strong>,
+                organizado conjuntamente por la State University of Maringá
+                (Brasil) y la Universidad de Jaén (España).
+            </li>
+
+            <li class="news-item">
+                [18/09/2026]
+                <strong>Primer premio al mejor póster
+                (MDPI Best Poster Award) en CAPE Forum 2026</strong>,
+                celebrado en Salamanca (España), del 16 al 18 de
+                septiembre de 2026.
+
+                El trabajo titulado
+                <em>"Planning Just Bioeconomy Transitions:
+                Employment Effects of Olive-Tree Pruning Biorefinery
+                Cluster Expansion under Stringent Greenhouse Gas
+                Mitigation Targets"</em>,
+                realizado por Duban García, Sadiel Martín-González,
+                Inmaculada Romero y Ángel Galán-Martín,
+                obtuvo el primer premio en la competición de pósteres.
+
+                <a href="images/Premio 1.jpeg"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Ver certificado del premio
+                </a>
+                |
+                <a href="images/Premio 2.jpeg"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Ver fotografía de la entrega
+                </a>
+            </li>
+
+        </ul>
+    </section>
+
+    <!-- Resultados -->
+    <section id="resultados">
+        <h2>Resultados</h2>
+
+        <nav class="results-nav" aria-label="Categorías de resultados">
+            <a href="#publicaciones">Publicaciones científicas</a>
+            <a href="#congresos">Congresos</a>
+            <a href="#divulgacion">Divulgación científica</a>
+            <a href="#formacion">Formación y transferencia</a>
+        </nav>
+
+        <!-- Publicaciones científicas -->
+        <div class="results-category" id="publicaciones">
+            <h3 class="results-category-title">Publicaciones científicas</h3>
+
+            <div class="results-grid">
+
+                <div class="result-item">
+                    <img src="images/paperACS.jpg" alt="Uncovering the Techno-Economic and Environmental Implications of a Multiproduct Biorefinery from Exhausted Olive Pomace">
+                    <h3>Uncovering the Techno-Economic and Environmental Implications of a Multiproduct Biorefinery from Exhausted Olive Pomace</h3>
+                    <a href="https://pubs.acs.org/doi/10.1021/acssuschemeng.4c07901" target="_blank">Ver más</a>
+                </div>
+
+                <div class="result-item">
+                    <img src="images/biorp.png" alt="Planetary boundary analysis in theenvironmental assessment of cornstover biorefineries">
+                    <h3>Planetary boundary analysis in theenvironmental assessment of cornstover biorefineries</h3>
+                    <a href="https://scijournals.onlinelibrary.wiley.com/doi/epdf/10.1002/bbb.70045" target="_blank">Ver más</a>
+                </div>
+
+                <div class="result-item">
+                    <img src="images/mdpi.png" alt="Sustainable Bioethanol Production and Phenolic Compounds from Avocado Stone Biomass Based on Microwave Pretreatment">
+                    <h3>Sustainable Bioethanol Production and Phenolic Compounds from Avocado Stone Biomass Based on Microwave Pretreatment</h3>
+                    <a href="https://www.mdpi.com/2304-8158/14/18/3160" target="_blank">Ver más</a>
+                </div>
+
+                <div class="result-item">
+                    <img src="images/ceramic.png" alt="Assessing Pathways to Carbon Neutrality in the Ceramic Sector: A Prospective Life Cycle Assessment under Energy System Projections and Technology Scenarios">
+                    <h3>Assessing Pathways to Carbon Neutrality in the Ceramic Sector: A Prospective Life Cycle Assessment under Energy System Projections and Technology Scenarios</h3>
+                    <a href="https://pubs.acs.org/doi/full/10.1021/acs.est.5c12177" target="_blank">Ver más</a>
+                </div>
+
+            </div>
         </div>
-        <div class="result-item">
-            <img src="images/paperACS.jpg" alt="Uncovering the Techno-Economic and Environmental Implications of a Multiproduct Biorefinery from Exhausted Olive Pomace">
-            <h3>Uncovering the Techno-Economic and Environmental Implications of a Multiproduct Biorefinery from Exhausted Olive Pomace</h3>
-            <a href="https://pubs.acs.org/doi/10.1021/acssuschemeng.4c07901" target="_blank">Ver más</a>
+
+        <!-- Congresos y comunicaciones científicas -->
+        <div class="results-category" id="congresos">
+            <h3 class="results-category-title">Congresos y comunicaciones científicas</h3>
+
+            <div class="results-grid">
+
+                <div class="result-item">
+                    <img src="images/cyprus2.PNG" alt="CYPRUS 2025 Conference">
+                    <h3>Presentación en CYPRUS 2025</h3>
+                    <p>
+                        12th International Conference on Sustainable Solid Waste Management<br>
+                        25–28 June 2025, Paphos, Cyprus
+                    </p>
+                    <a href="Documents/CYPRUS2025_Galán2.pdf" target="_blank">Ver más</a>
+                </div>
+
+            </div>
         </div>
-        <div class="result-item">
-            <img src="images/Curso.PNG" alt="Curso de ACV y optimización">
-            <h3>Curso de ACV y optimización para biorrefinerías sostenibles</h3>
-            <a href="Documents/Programación y horarios.pdf" target="_blank">Ver más</a>
+
+        <!-- Divulgación científica -->
+        <div class="results-category" id="divulgacion">
+            <h3 class="results-category-title">Divulgación científica</h3>
+
+            <div class="results-grid">
+
+                <div class="result-item">
+                    <img src="images/Folleto.png" alt="Folleto informativo">
+                    <h3>Folleto Informativo</h3>
+                    <a href="Documents/Brochure SUSBIOR.pdf" target="_blank">Ver más</a>
+                </div>
+
+                <div class="result-item">
+                    <img src="images/fym.png" alt="How can we make Bioenergy and Useful Products from Olive Waste?">
+                    <h3>How can we make Bioenergy and Useful Products from Olive Waste?</h3>
+                    <a href="https://kids.frontiersin.org/articles/10.3389/frym.2025.1616475" target="_blank">Ver más</a>
+                </div>
+
+            </div>
         </div>
-        <div class="result-item">
-            <img src="images/cyprus2.PNG" alt="CYPRUS 2025 Conference">
-            <h3>Presentación en CYPRUS 2025</h3>
-            <p>12th International Conference on Sustainable Solid Waste Management<br>25–28 June 2025, Paphos, Cyprus</p>
-            <a href="Documents/CYPRUS2025_Galán2.pdf" target="_blank">Ver más</a>
+
+        <!-- Formación y transferencia de conocimiento -->
+        <div class="results-category" id="formacion">
+            <h3 class="results-category-title">Formación y transferencia de conocimiento</h3>
+
+            <div class="results-grid">
+
+                <div class="result-item">
+                    <img src="images/Curso.PNG" alt="Curso de ACV y optimización">
+                    <h3>Curso de ACV y optimización para biorrefinerías sostenibles</h3>
+                    <a href="Documents/Programación y horarios.pdf" target="_blank">Ver más</a>
+                </div>
+
+                <div class="result-item">
+                    <img src="images/Curso lucas.png" alt="International Course on Process Modeling and Simulation">
+                    <h3>International Course on Process Modeling and Simulation</h3>
+                    <p>
+                        International COIL course jointly organized by the
+                        University of Jaén (Spain) and the State University
+                        of Maringá (Brazil).
+                    </p>
+                    <a href="https://lnkd.in/dcZxv7BN"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Ver más
+                    </a>
+                </div>
+
+            </div>
         </div>
-        <div class="result-item">
-            <img src="images/biorp.png" alt="Planetary boundary analysis in theenvironmental assessment of cornstover biorefineries">
-            <h3>Planetary boundary analysis in theenvironmental assessment of cornstover biorefineries</h3>
-            <a href="https://scijournals.onlinelibrary.wiley.com/doi/epdf/10.1002/bbb.70045" target="_blank">Ver más</a>
-        </div>
-        <div class="result-item">
-            <img src="images/mdpi.png" alt="Sustainable Bioethanol Production and Phenolic Compounds from Avocado Stone Biomass Based on Microwave Pretreatment">
-            <h3>Sustainable Bioethanol Production and Phenolic Compounds from Avocado Stone Biomass Based on Microwave Pretreatment</h3>
-            <a href="https://www.mdpi.com/2304-8158/14/18/3160" target="_blank">Ver más</a>
-        </div>
-        <div class="result-item">
-            <img src="images/ceramic.png" alt="Assessing Pathways to Carbon Neutrality in the Ceramic Sector: A Prospective Life Cycle Assessment under Energy System Projections and Technology Scenarios">
-            <h3>Assessing Pathways to Carbon Neutrality in the Ceramic Sector: A Prospective Life Cycle Assessment under Energy System Projections and Technology Scenarios</h3>
-            <a href="https://pubs.acs.org/doi/full/10.1021/acs.est.5c12177" target="_blank">Ver más</a>
-        </div>
-        <div class="result-item">
-            <img src="images/fym.png" alt="How can we make Bioenergy and Useful Products from Olive Waste?">
-            <h3>How can we make Bioenergy and Useful Products from Olive Waste?</h3>
-            <a href="https://kids.frontiersin.org/articles/10.3389/frym.2025.1616475" target="_blank">Ver más</a>
-        </div>
-        <div class="result-item">
-            <img src="images/Curso lucas.png" alt="International Course on Process Modeling and Simulation">
-            <h3>International Course on Process Modeling and Simulation</h3>
-            <p> International COIL course jointly organized by the University of Jaén (Spain) and the State University of Maringá (Brazil).
-            <a href="https://lnkd.in/dcZxv7BN"
-        </div>
-          </div>
-</section>
+    </section>
 
     <!-- Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
+
         <form class="contact-form">
             <input type="text" placeholder="Nombre" required>
             <input type="email" placeholder="Correo electrónico" required>
@@ -405,10 +575,12 @@
     <footer>
         <p>&copy; 2024 SUSBIOR. Todos los derechos reservados.</p>
         <p>Proyecto PID2023-151855OA-I00 financiado por la Agencia Estatal de Investigación mediante MICIU/AEI/10.13039/501100011033.</p>
+
         <div class="social-icons">
             <a href="https://x.com/an_gel_GM" target="_blank">
                 <img src="images/X_icon.png" alt="Twitter">
             </a>
+
             <a href="https://www.linkedin.com/in/angelgalanmartin/" target="_blank">
                 <img src="images/Linkedin.png" alt="LinkedIn">
             </a>
@@ -426,7 +598,8 @@
             slides.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
 
-        setInterval(autoSlide, 5000); // Cambiar cada 5 segundos
+        setInterval(autoSlide, 5000);
     </script>
+
 </body>
 </html>
