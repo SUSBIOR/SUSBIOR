@@ -15,6 +15,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+
 header {
     background: url('images/Fondo.png') no-repeat center center/cover;
     color: #fff;
@@ -25,6 +26,7 @@ header {
     align-items: center;
     text-align: center;
 }
+
 header h1 { margin: 0; font-size: 3.5rem; }
 header p { font-size: 1.5rem; }
 
@@ -37,6 +39,7 @@ nav {
     top: 0;
     z-index: 1000;
 }
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -45,7 +48,9 @@ nav ul {
     justify-content: center;
     flex-wrap: wrap;
 }
+
 nav ul li { margin: 0 15px; }
+
 nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -53,6 +58,7 @@ nav ul li a {
     font-weight: bold;
     transition: color 0.3s;
 }
+
 nav ul li a:hover { color: #00ff7f; }
 
 section {
@@ -66,20 +72,24 @@ section {
 }
 
 /* CARRUSEL */
+
 .carousel {
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 400px;
 }
+
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 .carousel img {
     min-width: 100%;
     object-fit: contain;
 }
+
 .carousel img.image-1,
 .carousel img.image-2,
 .carousel img.image-3 {
@@ -87,12 +97,14 @@ section {
 }
 
 /* EQUIPO */
+
 .team {
     display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .team-member {
     flex: 1 1 calc(25% - 20px);
     text-align: center;
@@ -101,6 +113,7 @@ section {
     border-radius: 8px;
     background: #f9f9f9;
 }
+
 .team-member img {
     width: 150px;
     height: 150px;
@@ -110,6 +123,7 @@ section {
 }
 
 /* ANTIGUOS MIEMBROS */
+
 .former-team-title {
     margin-top: 40px;
     padding-top: 20px;
@@ -117,18 +131,25 @@ section {
     color: #555;
     font-size: 1.2rem;
 }
+
 .former-team .team-member {
     flex: 0 1 280px;
     background: #f5f5f5;
     border-color: #e0e0e0;
 }
+
 .former-team .team-member img {
     width: 120px;
     height: 120px;
 }
 
 /* NOVEDADES */
-.news { list-style: none; padding: 0; }
+
+.news {
+    list-style: none;
+    padding: 0;
+}
+
 .news-item {
     margin-bottom: 15px;
     padding: 10px;
@@ -137,12 +158,14 @@ section {
 }
 
 /* RESULTADOS */
+
 .results-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
+
 .result-item {
     flex: 1 1 calc(33.333% - 20px);
     box-sizing: border-box;
@@ -154,12 +177,35 @@ section {
     text-align: center;
     transition: transform 0.3s;
 }
+
+.result-item:hover {
+    transform: translateY(-3px);
+}
+
 .result-item img {
     width: 100px;
     height: auto;
     margin-bottom: 10px;
 }
-.result-item h3 { overflow-wrap: anywhere; }
+
+.result-item h3 {
+    overflow-wrap: anywhere;
+}
+
+.result-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.result-item a {
+    color: #006400;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
 
 .results-nav {
     position: static;
@@ -170,6 +216,7 @@ section {
     gap: 10px;
     padding: 8px 0 20px;
 }
+
 .results-nav a {
     display: inline-block;
     padding: 10px 14px;
@@ -181,15 +228,18 @@ section {
     font-size: 0.95rem;
     font-weight: 700;
 }
+
 .results-nav a:hover,
 .results-nav a:focus-visible {
     background: #004d00;
     color: #fff;
 }
+
 .results-category {
     margin-top: 24px;
     scroll-margin-top: 90px;
 }
+
 .results-category-title {
     color: #004d00;
     font-size: 1.35rem;
@@ -199,11 +249,13 @@ section {
 }
 
 /* CONGRESOS */
+
 .congress-list {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
+
 .congress-item {
     padding: 14px 18px;
     margin-bottom: 8px;
@@ -212,7 +264,11 @@ section {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-.congress-item:hover { background-color: #edf5ed; }
+
+.congress-item:hover {
+    background-color: #edf5ed;
+}
+
 .congress-item h4 {
     margin: 0 0 6px 0;
     font-size: 1rem;
@@ -220,16 +276,19 @@ section {
     line-height: 1.4;
     color: #004d00;
 }
+
 .congress-item p {
     margin: 3px 0;
     font-size: 0.88rem;
     line-height: 1.45;
     color: #555;
 }
+
 .congress-item .congress-type {
     font-size: 0.85rem;
     color: #666;
 }
+
 .congress-item a {
     display: inline-block;
     margin-top: 6px;
@@ -238,12 +297,14 @@ section {
     color: #006400;
     text-decoration: none;
 }
+
 .congress-item a:hover {
     color: #009900;
     text-decoration: underline;
 }
 
 /* REPOSITORIO */
+
 .repository-notice {
     margin: 25px auto;
     padding: 25px;
@@ -253,11 +314,13 @@ section {
     border-radius: 8px;
     text-align: center;
 }
+
 .repository-notice h3 {
     margin-top: 0;
     color: #004d00;
     font-size: 1.2rem;
 }
+
 .repository-notice p {
     margin-bottom: 0;
     color: #555;
@@ -265,6 +328,7 @@ section {
 }
 
 /* CONTACTO */
+
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -272,6 +336,7 @@ section {
     flex-direction: column;
     gap: 15px;
 }
+
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -280,6 +345,7 @@ section {
     border-radius: 5px;
     box-sizing: border-box;
 }
+
 .contact-form button {
     padding: 10px 15px;
     background: #004d00;
@@ -289,37 +355,62 @@ section {
     cursor: pointer;
     transition: background 0.3s;
 }
-.contact-form button:hover { background: #00ff7f; }
+
+.contact-form button:hover {
+    background: #00ff7f;
+}
 
 /* PIE DE PÁGINA */
+
 footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 20px 10px;
 }
-footer p { margin: 5px 0; font-size: 0.9rem; }
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
 .social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
+
 .social-icons a img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     transition: transform 0.3s;
 }
-.social-icons a img:hover { transform: scale(1.2); }
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
 
 @media (max-width: 700px) {
-    nav ul { flex-wrap: wrap; gap: 10px; }
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
     nav ul li { margin: 0 5px; }
     nav ul li a { font-size: 0.95rem; }
+
     header h1 { font-size: 2.5rem; }
-    header p { font-size: 1.1rem; padding: 0 15px; }
-    .results-category .result-item { flex-basis: 100%; }
+    header p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .results-category .result-item {
+        flex-basis: 100%;
+    }
+
     .congress-item { padding: 12px; }
     .congress-item h4 { font-size: 0.95rem; }
     .repository-notice { padding: 18px; }
@@ -330,12 +421,14 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
 <body>
 
 <!-- ENCABEZADO -->
+
 <header>
     <h1>Proyecto SUSBIOR</h1>
     <p>Optimización de cadenas de suministro de biorrefinerías sostenibles</p>
 </header>
 
 <!-- NAVEGACIÓN -->
+
 <nav>
     <ul>
         <li><a href="#objetivo">Objetivo</a></li>
@@ -348,8 +441,10 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
 </nav>
 
 <!-- OBJETIVO -->
+
 <section id="objetivo">
     <h2>Objetivo de SUSBIOR</h2>
+
     <p>
         SUSBIOR es un proyecto innovador que busca impulsar el uso de biorrefinerías en España con biohub en Europa,
         combinando tecnología avanzada y sostenibilidad. Estas biorrefinerías transforman recursos naturales en
@@ -371,6 +466,7 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
 </section>
 
 <!-- EQUIPO -->
+
 <section id="equipo">
     <h2>Equipo</h2>
 
@@ -419,6 +515,7 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
     </div>
 
     <!-- ANTIGUOS MIEMBROS -->
+
     <h3 class="former-team-title">Antiguos miembros del equipo</h3>
 
     <div class="team former-team">
@@ -443,6 +540,7 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
 </section>
 
 <!-- NOVEDADES -->
+
 <section id="novedades">
     <h2>Novedades</h2>
 
@@ -492,17 +590,21 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
 </section>
 
 <!-- RESULTADOS -->
+
 <section id="resultados">
     <h2>Resultados</h2>
 
     <nav class="results-nav" aria-label="Categorías de resultados">
         <a href="#publicaciones">Publicaciones científicas</a>
+        <a href="#capitulos">Capítulos de libro</a>
+        <a href="#actas">Publicaciones en actas</a>
         <a href="#congresos">Congresos</a>
         <a href="#divulgacion">Divulgación científica</a>
         <a href="#formacion">Formación y transferencia</a>
     </nav>
 
     <!-- PUBLICACIONES CIENTÍFICAS -->
+
     <div class="results-category" id="publicaciones">
         <h3 class="results-category-title">Publicaciones científicas</h3>
 
@@ -548,7 +650,6 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
                 <a href="https://www.sciencedirect.com/science/article/pii/S0961953426005842" target="_blank" rel="noopener noreferrer">Ver más</a>
             </div>
 
-            <!-- NUEVA PUBLICACIÓN -->
             <div class="result-item">
                 <img src="images/review.PNG" alt="Recent advances and future perspectives in the valorization of olive biomass for sustainable biorefinery applications">
                 <h3>
@@ -560,7 +661,115 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
         </div>
     </div>
 
+    <!-- CAPÍTULOS DE LIBRO -->
+
+    <div class="results-category" id="capitulos">
+        <h3 class="results-category-title">Capítulos de libro</h3>
+
+        <div class="results-grid">
+
+            <div class="result-item">
+                <img src="images/LibroBiorrefinerias.png"
+                     alt="Portada del libro Biorrefinerías: una ineludible opción de futuro"
+                     loading="lazy">
+
+                <h3>Sostenibilidad y economía circular en biorrefinerías</h3>
+
+                <p>
+                    Bernabé Alonso Fariñas y Ángel Galán-Martín
+                </p>
+
+                <p>
+                    <em>Biorrefinerías: una ineludible opción de futuro</em>
+                </p>
+
+                <p>
+                    UJA Editorial · 2026 · pp. 105–130
+                </p>
+
+                <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=10731368"
+                   target="_blank" rel="noopener noreferrer">
+                    Ver capítulo
+                </a>
+            </div>
+
+            <div class="result-item">
+                <img src="images/LibroBiorrefinerias.png"
+                     alt="Portada del libro Biorrefinerías: una ineludible opción de futuro"
+                     loading="lazy">
+
+                <h3>Desafíos y oportunidades de las biorrefinerías</h3>
+
+                <p>
+                    Ángel Galán-Martín y Juan Miguel Romero García
+                </p>
+
+                <p>
+                    <em>Biorrefinerías: una ineludible opción de futuro</em>
+                </p>
+
+                <p>
+                    UJA Editorial · 2026 · pp. 181–198
+                </p>
+
+                <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=10731365"
+                   target="_blank" rel="noopener noreferrer">
+                    Ver capítulo
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PUBLICACIONES EN ACTAS DE CONGRESOS -->
+
+    <div class="results-category" id="actas">
+        <h3 class="results-category-title">Publicaciones en actas de congresos</h3>
+
+        <div class="results-grid">
+
+            <div class="result-item">
+                <img src="images/INTED2026.png"
+                     alt="Portada de las actas INTED2026"
+                     loading="lazy">
+
+                <h3>
+                    Education for sustainability through project-based learning:
+                    Integrating life cycle assessment and process optimization
+                    in biorefinery systems
+                </h3>
+
+                <p>
+                    Ángel Galán-Martín, Eulogio Castro Galiano,
+                    Raul Calvo Serrano, Daniel Vázquez y Carlos Pozo
+                </p>
+
+                <p>
+                    <em>
+                        INTED2026 Proceedings: 20th International Technology,
+                        Education and Development Conference
+                    </em>
+                </p>
+
+                <p>
+                    2026 · Artículo 0363 · Resumen publicado (abstract only)
+                </p>
+
+                <p>
+                    ISBN: 978-84-09-82385-7 · ISSN: 2340-1079
+                </p>
+
+                <a href="https://doi.org/10.21125/inted.2026.0363"
+                   target="_blank" rel="noopener noreferrer">
+                    Ver publicación (DOI)
+                </a>
+            </div>
+
+        </div>
+    </div>
+
     <!-- CONGRESOS -->
+
     <div class="results-category" id="congresos">
         <h3 class="results-category-title">Congresos y comunicaciones científicas</h3>
 
@@ -629,6 +838,7 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
     </div>
 
     <!-- DIVULGACIÓN -->
+
     <div class="results-category" id="divulgacion">
         <h3 class="results-category-title">Divulgación científica</h3>
 
@@ -659,6 +869,7 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
     </div>
 
     <!-- FORMACIÓN Y TRANSFERENCIA -->
+
     <div class="results-category" id="formacion">
         <h3 class="results-category-title">Formación y transferencia de conocimiento</h3>
 
@@ -698,6 +909,7 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
 </section>
 
 <!-- REPOSITORIO DE DATOS -->
+
 <section id="repositorio">
     <h2>Repositorio de datos</h2>
 
@@ -718,6 +930,7 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
 </section>
 
 <!-- CONTACTO -->
+
 <section id="contacto">
     <h2>Contacto</h2>
 
@@ -730,6 +943,7 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
 </section>
 
 <!-- PIE DE PÁGINA -->
+
 <footer>
     <p>&copy; 2024 SUSBIOR. Todos los derechos reservados.</p>
     <p>
@@ -740,6 +954,7 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
         <a href="https://x.com/an_gel_GM" target="_blank" rel="noopener noreferrer">
             <img src="images/X_icon.png" alt="Twitter">
         </a>
+
         <a href="https://www.linkedin.com/in/angelgalanmartin/" target="_blank" rel="noopener noreferrer">
             <img src="images/Linkedin.png" alt="LinkedIn">
         </a>
@@ -747,6 +962,7 @@ footer p { margin: 5px 0; font-size: 0.9rem; }
 </footer>
 
 <!-- CARRUSEL AUTOMÁTICO -->
+
 <script>
 let currentSlide = 0;
 const slides = document.querySelector('.carousel-images');
@@ -762,6 +978,3 @@ setInterval(autoSlide, 5000);
 
 </body>
 </html>
-
-     
-     
